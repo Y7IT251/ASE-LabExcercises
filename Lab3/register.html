@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Web Application for Direction and Weather</title>
+    <h3>Register Page</h3>
+</head>
+<script type="text/javascript">
+    function setmessage() {
+        document.getElementById("lbl_msg").innerHTML = "Registration is Success..";
+    }
+    function redirecttologin() {
+        window.location.href = "/index.html";
+    }
+</script>
+<body>
+    <form>
+        <div>
+            <label>First Name</label>
+            <br />
+            <input type="text" id="txt_fname" />
+        </div>
+        <br />
+        <div>
+            <label>Last Name</label>
+            <br />
+            <input type="text" id="txt_lname" />
+        </div>
+        <br />
+        <div>
+            <label>Mail ID</label>
+            <br />
+            <input type="text" id="txt_mailid" />
+        </div>
+        <br />
+        <div>
+            <label>Username</label>
+            <br />
+            <input type="text" id="txt_uname" />
+        </div>
+
+        <br />
+        <div>
+            <label>Password</label>
+            <br />
+            <input id="txt_pwd" type="password" />
+        </div>
+        <br />
+        <div>
+            <label id="lbl_msg"></label>
+            <br />
+        </div>
+        <div>
+
+            <input type="button" value="Register" id="btn_register" onclick="setmessage()" />
+            <input type="button" value="Cancel" id="btn_cancel" onclick="redirecttologin()" />
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Web Application for Direction and Weather</title>
+    <h3>Login Page</h3>
+</head>
+<script type="text/javascript">
+    function redirecttoregister()
+    {
+        window.location.href = "/register.html";
+    }
+    function redirecttodirections() {
+        window.location.href = "/directions.html";
+    }
+</script>
+<body>
+    <form>
+        <div>
+            <label>Username</label>
+            <br />
+            <input type="text" id="txt_username" />
+        </div>
+        <br />
+        <div>
+            <label>Password</label>
+            <br />
+            <input type="text" id="txt_password" />
+        </div>
+        <br />
+        <div>
+            <input type="button" value="Login" id="btn_login" onclick="redirecttodirections()" />
+            <input type="button" value="Register" id="btn_register" onclick="redirecttoregister()"/>
+        </div>
+        <br/>
+        <div>
+            <input type="button" value="GetDirections" id="btn_directions" onclick="redirecttodirections()" />
+        </div>
+    </form>
+</body>
+
+</html>
