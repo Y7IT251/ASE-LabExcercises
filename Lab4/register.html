@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Web Application UI</title>
+    <h3>Register Page</h3>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.js"></script>
+    <script src="scripts/controller.js"></script>-->
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript">
+        function setmessage() {
+            $("#lbl_msg").innerHTML = "Registration is Success..";
+        }
+        function redirecttologin() {
+            window.location.href = "/index.html";
+        }
+        function register() {
+            localStorage.setItem("username", $("#txt_uname").val());
+            localStorage.setItem("password", $("#txt_pwd").val());
+            $("#lbl_msg")[0].innerHTML = "User " + $("#txt_uname").val() + " successfully Registered!";
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+            <label>First Name</label>
+            <br />
+            <input type="text" id="txt_fname" />
+        </div>
+        <br />
+        <div>
+            <label>Last Name</label>
+            <br />
+            <input type="text" id="txt_lname" />
+        </div>
+        <br />
+        <div>
+            <label>Mail ID</label>
+            <br />
+            <input type="text" id="txt_mailid" />
+        </div>
+        <br />
+        <div>
+            <label>Username</label>
+            <br />
+            <input type="text" id="txt_uname" />
+        </div>
+
+        <br />
+        <div>
+            <label>Password</label>
+            <br />
+            <input id="txt_pwd" type="password" />
+        </div>
+        <br />
+        <div>
+            <label id="lbl_msg"></label>
+            <br />
+        </div>
+        <div>
+
+            <input type="button" value="Register" id="btn_register" onclick="register()" />
+            <input type="button" value="Cancel" id="btn_cancel" onclick="redirecttologin()" />
+        </div>
+    </form>
+</body>
+</html>

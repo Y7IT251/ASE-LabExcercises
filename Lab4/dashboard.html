@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            var uname = $("#txt_username").val();
+            var pwd = $("#txt_password").val();
+
+            if (localStorage.getItem("username") != null && localStorage.getItem("username") != "") {
+                $("#lbl_dbmsg")[0].innerHTML = "Welcome " + localStorage.getItem("username");
+            }
+            else {
+                window.location.href = "/index.html";
+                
+            }
+        });
+    </script>
+
+</head>
+
+    <body>
+        <center>
+            <div>
+                <label id="lbl_dbmsg"></label>
+                <br />
+            </div>
+
+            <div>
+                GOOGLE STOCK MARKET
+                <img src="http://chart.finance.yahoo.com/z?s=GOOG&t=3m&q=l&z=l&p=m50,m200" width=300 height=200>
+            </div>
+            <div>
+                <br />
+                MICROSOFTSTOCK MARKET
+                <img src="http://chart.finance.yahoo.com/z?s=MSFT&t=3m&q=l&z=l&p=m50,m200" width=300 height=200>
+            </div>
+            <div>
+                GOOGLE STOCK MARKET (VS) MICROSOFTSTOCK MARKET
+                <img src="https://chart.googleapis.com/chart?chs=400x100&chd=t:60,400&cht=p3&chl=Microsoft|Google" width=350 height=300>
+            </div>
+            <!--<div>
+            Tweet to <a href="https://twitter.com/intent/tweet?screen_name=Microsoft" class="twitter-mention-button" data-lang="en">@Microsoft</a> about how much you love Google!
+        </div>-->
+        </center>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Web Application UI</title>
+
+    <!-- CSS -->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <!-- JS -->
+    <!-- load angular, ngRoute, ngAnimate -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.js"></script>
+    <script src="scripts/controller.js"></script>-->
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript">
+        function redirecttoregister() {
+            window.location.href = "/register.html";
+        }
+        function redirecttodirections() {
+            window.location.href = "/directions.html";
+        }
+        function login()
+        {
+            var uname = $("#txt_username").val();
+            var pwd = $("#txt_password").val();
+
+            if(uname == localStorage.getItem("username") && pwd == localStorage.getItem("password"))
+            {
+                window.location.href = "/dashboard.html";
+            }
+            else
+            {
+                $("#lbl_lgmsg")[0].innerHTML = "Invalid Username or Password.."
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+            <label>Username</label>
+            <br />
+            <input type="text" id="txt_username" />
+        </div>
+        <br />
+        <div>
+            <label>Password</label>
+            <br />
+            <input type="text" id="txt_password" />
+        </div>
+        <div>
+            <label id="lbl_lgmsg"></label>
+            <br />
+        </div>
+        <div>
+            <br />
+            <input type="button" value="Login" id="btn_login" onclick="login()" />
+            <input type="button" value="Register" id="btn_register" onclick="redirecttoregister()" />
+        </div>
+        <br />
+        <div>
+            <input type="button" value="GetDirections" id="btn_directions" onclick="redirecttodirections()" />
+        </div>
+    </form>
+</body>
+
+</html>
