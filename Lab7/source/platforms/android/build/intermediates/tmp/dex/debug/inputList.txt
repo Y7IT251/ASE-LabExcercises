@@ -1,0 +1,2 @@
+C:\Users\ANarendra\Documents\Ionic\application\platforms\android\build\intermediates\classes\debug
+C:\Users\ANarendra\Documents\Ionic\application\platforms\android\build\intermediates\pre-dexed\debug\classes-d38291dc1674e474a2b1191d5b65255342a65ba8.jar
