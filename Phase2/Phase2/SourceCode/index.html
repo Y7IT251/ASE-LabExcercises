@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Identity and Access Management QRCode Reader</title>
+<script type="text/javascript" src="Scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.webcamqrcode.min.js"></script>
+</head>
+<body>
+    <br />
+<script>
+(function($){
+	$('document').ready(function(){
+		$('#qrcodebox').WebcamQRCode({
+		    onQRCodeDecode: function (p_data) {
+		        debugger;
+					$('#qrcode_result').html( p_data );
+			}
+		});
+		
+		$('#btn_start').click(function(){
+			$('#qrcodebox').WebcamQRCode().start();
+		});
+		
+		$('#btn_stop').click(function(){
+			$('#qrcodebox').WebcamQRCode().stop();
+		});
+	});
+})(jQuery);
+</script>
+    <center>
+        <p>
+            Identity and Access Management QRCode Reader
+        </p>
+        <br />
+        <div style="width: 350px; height: 350px;" id="qrcodebox">
+        </div>
+        <br />
+        <input type="button" value="Start" id="btn_start" />
+        <input type="button" value="Stop" id="btn_stop" />
+        <p>
+            QrCode Value : <span id="qrcode_result"></span>
+        </p>
+        <p>
+            <a href="#">Click here</a> to enter login details to access the application.
+        </p>
+    </center>
+</body>
